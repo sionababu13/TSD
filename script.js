@@ -73,8 +73,7 @@ const projects = [
         tech: "React · Vite",
         symbol: "06",
         color: "visual-six",
-        url: "./6/student-profile/index.html"
-    }
+        url: "./6/student-profile/dist/index.html"    }
 ];
 
 
