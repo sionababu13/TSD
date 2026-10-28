@@ -23,7 +23,7 @@ const projects = [
         tech: "HTML · CSS",
         symbol: "01",
         color: "visual-one",
-        url: ""
+        url: "./1/in.html"
     },
     {
         id: 2,
@@ -33,7 +33,7 @@ const projects = [
         tech: "HTML · CSS · JavaScript",
         symbol: "02",
         color: "visual-two",
-        url: ""
+        url: "./2/index.html"
     },
     {
         id: 3,
@@ -43,7 +43,7 @@ const projects = [
         tech: "React · JavaScript",
         symbol: "03",
         color: "visual-three",
-        url: ""
+        url: "./3/index.html"
     },
     {
         id: 4,
@@ -53,7 +53,7 @@ const projects = [
         tech: "Node.js · HTML · CSS",
         symbol: "04",
         color: "visual-four",
-        url: ""
+        url: "./4/index.html"
     },
     {
         id: 5,
@@ -63,7 +63,7 @@ const projects = [
         tech: "HTML · CSS · JavaScript",
         symbol: "05",
         color: "visual-five",
-        url: ""
+        url: "./5/index.html"
     },
     {
         id: 6,
@@ -73,7 +73,7 @@ const projects = [
         tech: "React · Vite",
         symbol: "06",
         color: "visual-six",
-        url: ""
+        url: "./6/student-profile/index.html"
     }
 ];
 
