@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethnic Elegance | Traditional Indian Fashion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- STICKY NAVIGATION BAR -->
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="logo">Ethnic <span>Elegance</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">
+      <span></span><span></span><span></span>
+    </label>
+    <ul class="nav-links">
+      <li><a href="#categories">New Arrivals</a></li>
+      <li><a href="#products">Best Sellers</a></li>
+      <li><a href="#promo">Collections</a></li>
+      <li><a href="#reviews">Customer Reviews</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+    <a href="#" class="cart-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span class="cart-text">Cart (0)</span>
+    </a>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-motif motif-1"></div>
+  <div class="hero-motif motif-2"></div>
+  <div class="hero-motif motif-3"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">Handwoven &middot; Handcrafted &middot; Heirloom</span>
+    <h1>Celebrate India's <em>Timeless</em> Tradition</h1>
+    <p>Discover handcrafted ethnic wear for every celebration.</p>
+    <a href="#products" class="btn-gold">Shop Now</a>
+  </div>
+</section>
+<div class="zari-strip"></div>
+
+<!--SHOP BY CATEGORY — CSS GRID-->
+<section class="categories" id="categories">
+  <div class="container">
+    <div class="section-head">
+      <div style="text-align:center;">
+        <span class="eyebrow">Curated For You</span>
+      </div>
+      <h2 class="section-title">Shop by Category</h2>
+      <p class="section-sub">Explore our signature edit of handcrafted ethnic essentials, woven with heritage and finished with modern grace.</p>
+    </div>
+    <div class="category-grid">
+      <div class="category-card">
+        <div class="category-icon">S</div>
+        <h3>Sarees</h3>
+        <span>Silk &amp; Handloom</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-icon">K</div>
+        <h3>Kurtas</h3>
+        <span>Everyday Grace</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-icon">L</div>
+        <h3>Lehengas</h3>
+        <span>Bridal &amp; Festive</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-icon">S</div>
+        <h3>Sherwanis</h3>
+        <span>Regal Menswear</span>
+      </div>
+
+      <div class="category-card" id="accessories">
+        <div class="category-icon">J</div>
+        <h3>Jewellery</h3>
+        <span>Kundan &amp; Gold</span>
+      </div>
+
+      <div class="category-card">
+        <div class="category-icon">H</div>
+        <h3>Handbags</h3>
+        <span>Embroidered Edit</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!--FEATURED COLLECTION — CSS GRID + Badges -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-head">
+      <div style="text-align:center;"><span class="eyebrow">Festive Edit</span></div>
+      <h2 class="section-title">Featured Collection</h2>
+      <p class="section-sub">Twelve signature pieces, each finished by hand — chosen for the woman and man who dress for the occasion.</p>
+    </div>
+
+    <div class="product-grid">
+
+      <!-- 1 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge sale">Sale</span>
+          <img src="https://mahavirs.com/cdn/shop/files/768424E9-D5D4-4479-BC8A-DD5AB2536BDC.jpg?v=1735049257&width=3024" alt="Banarasi Silk Saree">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Banarasi Silk Saree</div>
+          <p class="product-desc">Handwoven silk with a rich zari border.</p>
+          <div class="price"><span class="old">₹18,999</span>₹12,999</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge new">New</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmaBikGAVrSl3WC-4DRIK4tsZCu5lpyy8Goaskx0wxeg&s=10" alt="Traditional Kurta">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Traditional Kurta</div>
+          <p class="product-desc">Soft cotton kurta with subtle embroidery.</p>
+          <div class="price">₹3,499</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge sale">Sale</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU84scFotdjKHPlZZc9gaw5oKsni5IWagrnspcPdzk_g&s=10" alt="Bridal Lehenga">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Bridal Lehenga</div>
+          <p class="product-desc">Heavily embellished lehenga for your big day.</p>
+          <div class="price"><span class="old">₹42,000</span>₹29,999</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge new">New</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVRNHBdsReGnhqOjZlkpvhI-PuNTdh9Wv0rK4vWCxXvg&s=10" alt="Royal Sherwani">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Royal Sherwani</div>
+          <p class="product-desc">Regal sherwani crafted for grand occasions.</p>
+          <div class="price">₹15,499</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge sale">Sale</span>
+          <img src="https://www.littlefingersindia.com/wp-content/uploads/2024/04/IMG_20240421_1313461.jpg" alt="Traditional Jewellery">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Traditional Jewellery Set</div>
+          <p class="product-desc">Kundan set with matching earrings.</p>
+          <div class="price"><span class="old">₹9,999</span>₹6,999</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge new">New</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9qyjVGMBDkGL_1T118YBLzQajqx07EalOGCFsXLUHUg&s" alt="Embroidered Handbag">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Embroidered Handbag</div>
+          <p class="product-desc">Hand-embroidered clutch with gold thread.</p>
+          <div class="price">₹4,299</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge new">New</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTto0_f_JLCDzsBWJdoE-G9EmM3PGBoALEIDhLzeF5YvZ2n3blSZKgmfPo&s=10" alt="Anarkali Suit">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Anarkali Suit</div>
+          <p class="product-desc">Flowing Anarkali with floral embroidery.</p>
+          <div class="price">₹5,999</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge sale">Sale</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdmPrViO6fhImbQ8EuDZedE89r_zrF4zCVOjBSzMeUwQ&s=10" alt="Palazzo Suit Set">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Palazzo Suit Set</div>
+          <p class="product-desc">Comfortable palazzo set with matching dupatta.</p>
+          <div class="price"><span class="old">₹4,499</span>₹3,299</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge new">New</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXvm0JHqU1GWgV0eppetndzBlpZyzeHjGs18pciCaywQ&s=10" alt="Nehru Jacket">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Nehru Jacket</div>
+          <p class="product-desc">Classic Nehru jacket for festive layering.</p>
+          <div class="price">₹2,799</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge sale">Sale</span>
+          <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQpd8P2MhRTgkwVdVBnK2APmS5eUk1Z06yJ2GyfwMEJh6aCE4MH3WKBVhdNubR41UQVpKObZq-r5Vk0jUppmaH8f1fkWNZeIrf_4jdv77cr" alt="Salwar Kameez">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Salwar Kameez</div>
+          <p class="product-desc">Elegant salwar kameez in pastel hues.</p>
+          <div class="price"><span class="old">₹3,999</span>₹2,999</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge new">New</span>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs8U1WzxnpI0GQcrCoFcR2fm6edBq7GU3-eyh8ebmWfg&s=10" alt="Indo-Western Gown">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Indo-Western Gown</div>
+          <p class="product-desc">Fusion gown blending tradition and trend.</p>
+          <div class="price">₹6,499</div>
+          <div class="stars">★★★★★</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="product-card">
+        <div class="product-media">
+          <span class="badge sale">Sale</span>
+          <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSqWEykRYAOgH-3pZSBhR-sgj5_sKQV4FWvgvtxqpx4Bd3w0ty_GoOvvxzu_wt-6DK66kQ0tRns2SNpzO1F-F1JHfh5xEx4yuv2M5r5YaXk" alt="Kanjeevaram Saree">
+        </div>
+        <div class="product-info">
+          <div class="p-name">Kanjeevaram Saree</div>
+          <p class="product-desc"> A luxurious handwoven silk saree</p>
+          <div class="price"><span class="old">₹4,199</span>₹3,499</div>
+          <div class="stars">★★★★☆</div>
+          <button class="btn-outline-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--promotional banner-->
+<section class="promo" id="promo">
+  <div class="promo-ring"></div>
+  <div class="promo-ring r2"></div>
+  <h2>Festive Collection — Flat 30% OFF</h2>
+  <p>Limited-time edit on sarees, lehengas &amp; sherwanis, crafted for the season of celebration.</p>
+  <a href="#products" class="btn-gold">Explore Now</a>
+</section>
+
+<!--customer reviews -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-head">
+      <div style="text-align:center;"><span class="eyebrow">Loved by Many</span></div>
+      <h2 class="section-title">Customer Reviews</h2>
+    </div>
+    <div class="review-flex">
+      <div class="review-card">
+        <div class="review-quote">&ldquo;</div>
+        <p class="review-text">The Banarasi saree exceeded every expectation — the zari work is exquisite and the fall is perfect for a wedding.</p>
+        <div class="review-footer">
+          <div class="review-avatar">A</div>
+          <div>
+            <div class="review-name">Ananya Sharma</div>
+            <div class="review-loc">Mumbai, IN</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote">&ldquo;</div>
+        <p class="review-text">Ordered a sherwani for my brother's wedding — the fit and finishing felt like a couture atelier, not an online order.</p>
+        <div class="review-footer">
+          <div class="review-avatar">R</div>
+          <div>
+            <div class="review-name">Rohit Verma</div>
+            <div class="review-loc">Delhi, IN</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-quote">&ldquo;</div>
+        <p class="review-text">Ethnic Elegance's jewellery set turned a simple kurta into a festive outfit. Packaging alone felt premium.</p>
+        <div class="review-footer">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Sneha Patel</div>
+            <div class="review-loc">Ahmedabad, IN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-flex">
+      <div class="footer-brand">
+        <div class="logo">Ethnic <span>Elegance</span></div>
+        <p>Handcrafted Indian ethnic wear, woven with heritage for every celebration in your life.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Customer Care</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">hello@ethnicelegance.in</a></li>
+          <li><a href="#">+91 98765 43210</a></li>
+          <li><a href="#">Surat, Gujarat, India</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Ethnic <span>Elegance</span>. All rights reserved.
+    </div>
+  </div>
+</footer>
+</body>
+</html>

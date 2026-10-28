@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Foodie - Login & Registration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<input type="radio" name="form" id="login" checked>
+<input type="radio" name="form" id="register">
+
+<div class="container">
+
+<div class="left-section">
+
+<div class="logo"><span>●</span> FOODIE</div>
+
+<div class="circle circle1"></div>
+<div class="circle circle2"></div>
+<div class="circle circle3"></div>
+
+<div class="food">
+<div class="plate"></div>
+<div class="burger">
+<div class="bun-top"></div>
+<div class="lettuce"></div>
+<div class="cheese"></div>
+<div class="patty"></div>
+<div class="bun-bottom"></div>
+</div>
+</div>
+
+<div class="left-content">
+<h1>Delicious food, <span>delivered</span> to you.</h1>
+<p>Order your favourite meals from your favourite restaurants and enjoy them right at your doorstep.</p>
+</div>
+
+<div class="food-list">
+<span>🍕 Pizza</span>
+<span>🍔 Burger</span>
+<span>🍜 Noodles</span>
+<span>🍰 Desserts</span>
+</div>
+
+</div>
+
+
+<div class="right-section">
+
+<div class="auth">
+
+<div class="tabs">
+<div class="slider"></div>
+<label for="login">Login</label>
+<label for="register">Register</label>
+</div>
+
+
+<!-- LOGIN -->
+
+<div class="form login-form">
+
+<h2>Welcome Back!</h2>
+
+<p class="description">
+Login to order your favourite food.
+</p>
+
+<div class="input-box">
+<input type="email" id="loginEmail" placeholder=" ">
+<label>Email Address</label>
+</div>
+
+<div class="input-box">
+<input type="password" id="loginPassword" placeholder=" ">
+<label>Password</label>
+</div>
+
+<div class="options">
+<label>
+<input type="checkbox" id="rememberMe">
+Remember me
+</label>
+
+<a href="#" id="forgotPassword">Forgot Password?</a>
+</div>
+
+<button type="button" id="loginButton">Login</button>
+
+<p class="switch">
+Don't have an account?
+<label for="register">Create Account</label>
+</p>
+
+</div>
+
+
+<!-- REGISTER -->
+
+<div class="form register-form">
+
+<h2>Create Account</h2>
+
+<p class="description">
+Join Foodie and get your first meal delivered.
+</p>
+
+<div class="input-box">
+<input type="text" id="registerName" placeholder=" ">
+<label>Full Name</label>
+</div>
+
+<div class="input-box">
+<input type="email" id="registerEmail" placeholder=" ">
+<label>Email Address</label>
+</div>
+
+<div class="input-box">
+<input type="password" id="registerPassword" placeholder=" ">
+<label>Password</label>
+</div>
+
+<div class="input-box">
+<input type="password" id="confirmPassword" placeholder=" ">
+<label>Confirm Password</label>
+</div>
+
+<label class="terms">
+<input type="checkbox" id="terms">
+I agree to the Terms & Conditions
+</label>
+
+<button type="button" id="registerButton">
+Create Account
+</button>
+
+<p class="switch">
+Already have an account?
+<label for="login">Login</label>
+</p>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<script type="module">
+
+import {createClient} from
+"https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+
+/* SUPABASE */
+
+const supabaseUrl="https://vbpnmerktkhkvkzklayv.supabase.co";
+const supabaseKey="sb_publishable_HTci5MWtg4BxEYaVLxSiGg_ADWsXErP";
+
+const supabase=createClient(supabaseUrl,supabaseKey);
+
+
+/* REGISTER */
+
+const registerButton=document.getElementById("registerButton");
+
+registerButton.addEventListener("click",async()=>{
+
+const name=document.getElementById("registerName").value.trim();
+const email=document.getElementById("registerEmail").value.trim();
+const password=document.getElementById("registerPassword").value;
+const confirm=document.getElementById("confirmPassword").value;
+const terms=document.getElementById("terms").checked;
+
+if(!name||!email||!password||!confirm)
+return alert("Please fill all fields.");
+
+if(password!==confirm)
+return alert("Passwords do not match!");
+
+if(password.length<6)
+return alert("Password must be at least 6 characters.");
+
+if(!terms)
+return alert("Please agree to the Terms & Conditions.");
+
+registerButton.disabled=true;
+registerButton.innerText="Creating...";
+
+try{
+
+const {data,error}=await supabase.auth.signUp({
+email,password
+});
+
+if(error)throw error;
+
+if(data.user){
+
+const {error:dbError}=await supabase
+.from("users")
+.insert([{
+id:data.user.id,
+name:name,
+email:email
+}]);
+
+if(dbError)throw dbError;
+
+}
+
+alert("Account created successfully!");
+
+document.getElementById("login").checked=true;
+
+document.getElementById("registerName").value="";
+document.getElementById("registerEmail").value="";
+document.getElementById("registerPassword").value="";
+document.getElementById("confirmPassword").value="";
+document.getElementById("terms").checked=false;
+
+}catch(error){
+
+console.log(error);
+alert("Registration failed: "+error.message);
+
+}
+
+registerButton.disabled=false;
+registerButton.innerText="Create Account";
+
+});
+
+
+/* LOGIN */
+
+const loginButton=document.getElementById("loginButton");
+
+loginButton.addEventListener("click",async()=>{
+
+const email=document.getElementById("loginEmail").value.trim();
+const password=document.getElementById("loginPassword").value;
+
+if(!email||!password)
+return alert("Please enter email and password.");
+
+loginButton.disabled=true;
+loginButton.innerText="Logging in...";
+
+try{
+
+const {data,error}=await supabase.auth.signInWithPassword({
+email,password
+});
+
+if(error)throw error;
+
+console.log("Logged in:",data.user);
+alert("Logged in successfully!");
+
+}catch(error){
+
+console.log(error);
+alert("Login failed: "+error.message);
+
+}
+
+loginButton.disabled=false;
+loginButton.innerText="Login";
+
+});
+
+
+/* FORGOT PASSWORD */
+
+document.getElementById("forgotPassword").addEventListener("click",async(e)=>{
+
+e.preventDefault();
+
+const email=document.getElementById("loginEmail").value.trim();
+
+if(!email)
+return alert("Please enter your email address first.");
+
+try{
+
+const {error}=await supabase.auth.resetPasswordForEmail(email);
+
+if(error)throw error;
+
+alert("Password reset email has been sent!");
+
+}catch(error){
+alert("Unable to send reset email: "+error.message);
+}
+});
+</script>
+</body>
+</html>

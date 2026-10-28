@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites Restaurant</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="style.css">
+</head>
+<body>
+<!--NAVBAR-->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                Tasty <span>Bites</span>
+            </div>
+            <input type="checkbox" id="menu">
+            <label for="menu" class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="nav-links">
+                <li><a href="#menu-section">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#contact"
+                        class="book-btn">
+                        Book Table
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--HERO -->
+    <section class="hero"
+        id="home">
+        <div class="hero-text">
+            <h1>
+                Taste the Best Food in Town
+            </h1>
+            <p>
+                Welcome to Tasty Bites where delicious flavors,
+                premium ingredients, and unforgettable dining
+                experiences come together.
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu-section"class="btn">Order Now</a>
+                <a href="#gallery"class="btn outline">Explore Menu</a>
+            </div>
+        </div>
+    </section>
+    <!--POPULAR DISHES -->
+    <section class="dishes"
+        id="menu-section">
+        <h2 class="section-title">
+            Popular Dishes
+        </h2>
+        <div class="dish-grid">
+            <!-- Card 1 -->
+            <div class="dish-card"> <img src="images/pizza.jpg">
+                <h3>Margherita Pizza</h3>
+                <p>Crispy crust with mozzarella cheese.</p>
+                <div class="price"> ₹259</div>
+                <div class="rating">
+                    ⭐⭐⭐⭐
+                </div>
+                <button> Order Now</button> </div>
+            <!-- Card 2 -->
+            <div class="dish-card"> <img src="images/burger.jpg">
+                <h3>Veg Burger</h3>
+                <p> Loaded with fresh veggies & cheese.</p>
+                <div class="price"> ₹170 </div>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <button>Order Now</button>
+            </div>
+            <!-- Card 3 -->
+            <div class="dish-card"> <img src="images/biryani.jpg">
+                <h3>Chicken Biryani</h3>
+                <p> Aromatic rice with juicy chicken. </p>
+                <div class="price">₹349
+                </div>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <button> Order Now </button>
+            </div>
+            <!-- Card 4 -->
+            <div class="dish-card"> <img src="images/pasta.jpg">
+                <h3>Pasta Alfredo</h3>
+                <p> Creamy white sauce Italian pasta.</p>
+                <div class="price">
+                    ₹269
+                </div>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <button> Order Now  </button>
+            </div>
+            <!-- Card 5 -->
+            <div class="dish-card">  <img src="images/paneer.jpg">
+                <h3>Paneer Tikka</h3>
+                <p>Smoky grilled paneer cubes. </p>
+                <div class="price">₹259
+                </div>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <button>  Order Now
+                </button>
+            </div>
+            <!-- Card 6 -->
+            <div class="dish-card"><img src="images/sandwich.jpg">
+                <h3>Grilled Sandwich</h3>
+                <p> Crispy sandwich with fresh veggies. </p>
+                <div class="price">
+                    ₹149
+                </div>
+                <div class="rating">
+                    ⭐⭐⭐⭐
+                </div>
+                <button>  Order Now
+                </button>
+            </div>
+            <!-- Card 7 -->
+            <div class="dish-card">
+                <img src="images/cake.jpg">
+                <h3>Chocolate Cake</h3>
+                <p>
+                    Rich chocolate delight.
+                </p>
+                <div class="price">
+                    ₹199
+                </div>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <button>
+                    Order Now
+                </button>
+            </div>
+            <!-- Card 8 -->
+            <div class="dish-card">
+                <img src="images/juice.jpg">
+                <h3>Fresh Juice</h3>
+                <p>
+                    Healthy seasonal fruit juice.
+                </p>
+                <div class="price">
+                    ₹109
+                </div>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <button>
+                    Order Now
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- WHY CHOOSE US -->
+    <section class="features"
+        id="about">
+        <h2 class="section-title">
+            Why Choose Us
+        </h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-seedling"></i>
+                <h3>Fresh Ingredients</h3>
+                <p>Only premium quality ingredients.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Expert Chefs</h3>
+                <p>Prepared by experienced chefs.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>Quick delivery to your doorstep.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-award"></i>
+                <h3>Premium Quality</h3>
+                <p>Best taste with highest standards.</p>
+            </div>
+        </div>
+    </section>
+        <!--GALLERY--> 
+    <section class="gallery" id="gallery">
+        <h2 class="section-title">
+            Food Gallery
+        </h2>
+        <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="images/sizzler.jpg" alt="Chicken Sizzler">
+            <div class="gallery-overlay">
+                <h3>Chicken Sizzler</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/paneer-butter.jpg" alt="Paneer Butter Masala">
+            <div class="gallery-overlay">
+                <h3>Paneer Butter Masala</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/noodles.jpg" alt="Hakka Noodles">
+            <div class="gallery-overlay">
+                <h3>Hakka Noodles</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/thali.jpg" alt="Thali Platter">
+            <div class="gallery-overlay">
+                <h3>Thali Platter</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/salad.jpg" alt="Salad">
+            <div class="gallery-overlay">
+                <h3>Salads</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/mojito.jpg" alt="Mojito">
+            <div class="gallery-overlay">
+                <h3>Fresh Mojito</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/icecream.jpg" alt="Ice Cream Sundae">
+            <div class="gallery-overlay">
+                <h3>Ice Cream Sundae</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/pulao.jpeg" alt="Pulao">
+            <div class="gallery-overlay">
+                <h3>Pulao</h3>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/manchurian.jpg" alt="Manchurian">
+            <div class="gallery-overlay">
+                <h3>Manchurian</h3>
+            </div>
+        </div>
+    </div>
+</section>
+        </div>
+    </section>
+    <!--  CUSTOMER REVIEWS -->
+    <section class="reviews" id="reviews">
+        <h2 class="section-title">
+            What Our Customers Say
+        </h2>
+        <div class="review-container">
+            <!-- Review 1 -->
+            <div class="review-card">
+                <img src="images/review.jpeg" alt="Customer">
+                <h3>Emily Johnson</h3>
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p> Amazing ambience and delicious food.
+                    Definitely one of the best restaurants
+                    I've visited!
+                </p>
+            </div>
+            <!-- Review 2 -->
+            <div class="review-card">
+                <img src="images/review2.jpeg" alt="Customer">
+                <h3>David Miller</h3>
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p>
+                    Fast delivery, fresh ingredients,
+                    and excellent customer service.
+                    Highly recommended!
+                </p>
+            </div>
+            <!-- Review 3 -->
+            <div class="review-card">
+                <img src="images/review3.jpeg" alt="Customer">
+                <h3>Sophia Williams</h3>
+                <div class="stars">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <p>
+                    Loved the pasta and desserts.
+                    Beautiful interior and wonderful staff.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--  CONTACT-->
+    <section class="contact" id="contact">
+        <h2 class="section-title">
+            Contact Us
+        </h2>
+        <div class="contact-container">
+            <!-- Left Side -->
+            <div class="contact-info">
+                <h3>Visit Tasty Bites</h3>
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    123 Food Street,
+                    Mumbai, India
+                </p>
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 9876543210
+                </p>
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    tastybites@gmail.com
+                </p>
+                <p>
+                    <i class="fa-solid fa-clock"></i>
+                    Mon - Sun : 10:00 AM - 11:00 PM
+                </p>
+            </div>
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required>
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required>
+                <textarea
+                    rows="6"
+                    placeholder="Your Message"
+                    required>
+                </textarea>
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>
+                    Tasty <span>Bites</span>
+                </h2>
+                <p>
+                    Bringing delicious food
+                    and unforgettable dining
+                    experiences every day.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu-section">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">
+            © 2026 Tasty Bites.
+            All Rights Reserved.
+        </p>
+    </footer>
+</body>
+ </html>

@@ -1,0 +1,375 @@
+
+/* ============================
+   1. GLOBAL STYLING
+============================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #080d1b;
+  color: #f8fafc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.portal {
+  min-height: 100vh;
+  padding: clamp(20px, 5vw, 65px);
+  background:
+    radial-gradient(
+      ellipse at 10% 10%,
+      rgba(91, 33, 182, 0.24),
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 90% 90%,
+      rgba(6, 182, 212, 0.15),
+      transparent 35%
+    ),
+    #080d1b;
+}
+
+/* ============================
+   2. HEADER
+============================ */
+
+.portal-header {
+  max-width: 1200px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.portal-header h1 {
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+  margin: 0 0 14px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #a78bfa,
+    #67e8f9
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.portal-header p {
+  color: #94a3b8;
+  font-size: clamp(14px, 2vw, 18px);
+  margin: 0;
+}
+
+/* ============================
+   3. PROFILE GRID
+============================ */
+
+.profile-container {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 260px), 1fr)
+  );
+
+  gap: clamp(18px, 3vw, 30px);
+
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ============================
+   4. STUDENT CARD
+============================ */
+
+.student-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  width: 100%;
+  min-width: 0;
+
+  padding: clamp(22px, 3vw, 34px);
+
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  border-radius: 24px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(30, 41, 72, 0.95),
+    rgba(15, 23, 42, 0.98)
+  );
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  animation: cardAppear 0.7s ease both;
+}
+
+/* Decorative glowing circle */
+.student-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  width: 180px;
+  height: 180px;
+  top: -90px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(139, 92, 246, 0.13);
+  filter: blur(15px);
+
+  transition: transform 0.4s ease;
+}
+
+/* Decorative bottom accent */
+.student-card::after {
+  content: "";
+  position: absolute;
+
+  height: 3px;
+  width: 100%;
+
+  left: 0;
+  bottom: 0;
+
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #06b6d4,
+    #a78bfa
+  );
+}
+
+/* Desktop hover */
+@media (hover: hover) and (pointer: fine) {
+  .student-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(139, 92, 246, 0.55);
+
+    box-shadow:
+      0 18px 45px rgba(0, 0, 0, 0.35),
+      0 0 25px rgba(139, 92, 246, 0.08);
+  }
+
+  .student-card:hover::before {
+    transform: scale(1.4);
+  }
+}
+
+/* ============================
+   5. PROFILE AVATAR
+============================ */
+
+.profile-icon {
+  width: clamp(70px, 9vw, 100px);
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 22px;
+
+  border-radius: 28px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #4f46e5,
+    #0891b2
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  color: white;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 25px rgba(124, 58, 237, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* ============================
+   6. STUDENT NAME
+============================ */
+
+.student-card h2 {
+  color: #f8fafc;
+
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+
+  text-align: center;
+
+  margin: 0 0 25px;
+
+  overflow-wrap: anywhere;
+}
+
+/* ============================
+   7. STUDENT DETAILS
+============================ */
+
+.student-details {
+  width: 100%;
+  min-width: 0;
+}
+
+.student-details p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  font-size: clamp(13px, 1.5vw, 15px);
+  line-height: 1.7;
+
+  color: #cbd5e1;
+
+  padding: 10px 12px;
+  margin: 8px 0;
+
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+
+  overflow-wrap: anywhere;
+}
+
+.student-details strong {
+  color: #a5b4fc;
+  font-weight: 600;
+}
+
+/* ============================
+   8. TABLET
+============================ */
+
+@media (max-width: 900px) {
+  .portal {
+    padding: 30px 22px;
+  }
+
+  .profile-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .student-card {
+    border-radius: 20px;
+  }
+}
+
+/* ============================
+   9. MOBILE
+============================ */
+
+@media (max-width: 600px) {
+  .portal {
+    padding: 25px 15px;
+  }
+
+  .portal-header {
+    margin-bottom: 30px;
+  }
+
+  .profile-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .student-card {
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+  .profile-icon {
+    width: 75px;
+    border-radius: 23px;
+  }
+
+  .student-card h2 {
+    font-size: 22px;
+  }
+
+  .student-details p {
+    font-size: 14px;
+  }
+}
+
+/* ============================
+   10. EXTRA SMALL PHONES
+============================ */
+
+@media (max-width: 360px) {
+  .portal {
+    padding: 20px 10px;
+  }
+
+  .portal-header h1 {
+    font-size: 27px;
+  }
+
+  .student-card {
+    padding: 20px 14px;
+  }
+
+  .student-details p {
+    font-size: 13px;
+    padding: 9px;
+  }
+}
+
+/* ============================
+   11. ANIMATION
+============================ */
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
